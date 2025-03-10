@@ -5,14 +5,14 @@
 - Q1, Js Lecture 1 MCQ: Object
 
 ```js
-let  cap ={
-    name:
-    age:34,
-    isAvenger: true,
-}
+let cap = {
+  name: "Steve",
+  age: 34,
+  isAvenger: true,
+};
 
-for (let key in cap){
-    console.log(key, " ", cap[key]);
+for (let key in cap) {
+  console.log(key, " ", cap[key]);
 }
 ```
 
@@ -26,7 +26,7 @@ Output :
 - Q2, Js Lecture 1 MCQ: 4xScope
 
 ```js
-let = 2;
+let a = 2;
 {
   let a = 3;
   {

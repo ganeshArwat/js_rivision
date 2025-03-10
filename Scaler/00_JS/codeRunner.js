@@ -1,8 +1,18 @@
-const firstPromise = new Promise((res, rej) => {
-  setTimeout(res, 500, 'one');
- });
- 
- const secondPromise = new Promise((res, rej) => {
-  setTimeout(res, 100, 'two');
- });
- Promise.race([firstPromise, secondPromise]).then(res => console.log(res));
+let a = 10;
+console.log("line number 2", a);
+function fn() {
+  console.log("line number 4", a);
+  // let a = 20;
+  a++;
+  console.log("line number 7", a);
+
+  if (a) {
+    let a = 30;
+    a++;
+    console.log("line number 11", a);
+  }
+
+  console.log("line number 13", a);
+}
+fn();
+console.log("line number 16", a);
