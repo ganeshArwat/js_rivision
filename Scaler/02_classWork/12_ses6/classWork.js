@@ -17,6 +17,3 @@ function freeze(obj) {
     Object.freeze(obj);
   }
 }
-
-
-celebra

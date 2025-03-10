@@ -25,6 +25,7 @@ today?`;
 console.log("Value of s3: ", s3);
 
 // 4th statement.
+var name = "Rajneesh";
 var e;
 console.log("typeof a where constent is: " + e + " -> ", typeof e);
 e = 10;

@@ -440,6 +440,8 @@ console.log(b);
 Output :
 this only works if and only if
 only works if and only if
+
+b[c] = "i"; will not work becase the string is immutable
 ```
 
 - Q2. JS Lecture 1: H1 - Decimal to Binary
@@ -465,6 +467,26 @@ function ConvertToBinary(dec) {
 ```
 Output :
 
+```
+
+- Q2 - B. JS Lecture 1: H1 - Binary to Decimal
+
+```
+Complete the function binaryToDecimal(binary), which takes a binary number text and returns its Decimal.
+
+Sample Test Case 1:
+
+Input:
+1010
+
+Output:
+10
+```
+
+```js
+function binaryToDecimal(binaryStr) {
+    return parseInt(binaryStr, 2);
+}
 ```
 
 - Q3. JS Lecture 1 MCQ: var scope
