@@ -87,7 +87,7 @@ console.log("After");
  *      -> JS provide you the logic.
  *      -> Programming lang.
  *                 [C++ -> Java] : Pointers were take care of.
- *                 [Java -> JS]  : There are no threads tp take care of.
+ *                 [Java -> JS]  : here are no threads tp take care of.
  *  Inference : You cannot create an asynchronous fns as a programmer -> Enviornment
  */
 
@@ -99,7 +99,7 @@ console.log(
  * Task:
  * Serial Tasks:
  * Parallel Tasks:
- *
+ *T
  * Code
  *  Asynchronous
  *  Synchronous code
@@ -111,14 +111,15 @@ console.log(
  * Parallel Task : task that are independent
  */
 
-const fs = require("fs");
 
 /**
  * synchronous function given by nodejs to read a file
  * */
-
+// const fs = require("fs");
+// const path = require("path");
+// const filePath = path.join(__dirname, "f1.txt");
 // console.log("Before");
-// const buffer = fs.readFileSync("./f1.txt");
+// const buffer = fs.readFileSync(filePath);
 // console.log("" + buffer);
 // console.log("After");
 
@@ -127,10 +128,12 @@ const fs = require("fs");
  * Asynchrouns function to read a file
  *
  * */
-
+// const fs = require("fs");
+// const path = require("path");
+// const filePath = path.join(__dirname, "f1.txt");
 // console.log("Before");
-// fs.readFile("./f1.txt", function (err, data) {
-//     console.log("" + data);
+// fs.readFile(filePath, function (err, data) {
+//   console.log("data: " + data);
 // })
 // console.log("After");
 

@@ -40,37 +40,41 @@
 
 /********************** Question 2 ******************/
 // let cap2 = {
-//     firstName: "Steve",
-//     sayHi: function (param) {
-//         console.log("47", this.firstName);
-//         const iAmInner = function (param) {
-//             console.log("49", this.firstName);
-//         }
-//         // EC by this kind of call -> window
-//         iAmInner(20);
-//     }
-// }
+//   firstName: "Steve",
+//   sayHi: function (param) {
+//     console.log("47", this.firstName);
+//     const iAmInner = function (param) {
+//       console.log("49", this.firstName);
+//     };
+//     const iAmInner2 = (param) => {
+//       console.log("49", this.firstName);
+//     };
+//     // EC by this kind of call -> window
+//     iAmInner(20); // this -> global for Node and window for browser
+//     iAmInner2(20); // this -> cap inheritance as lexical scope for arrow function
+//   },
+// };
 
-// EC by this -> cap
+// // EC by this -> cap
 // cap2.sayHi(10);
 
-// iamInner -> this =window, param=20
-// cap.saHI -> param=10, this = cap2
-// GEC
+// // iamInner -> this =window, param=20
+// // cap.saHI -> param=10, this = cap2
+// // GEC
 
 /*****************Question3 *******************/
 // // var -> GEC
 // let cap3 = {
-//     firstName: "Steve",
-//     sayHi: function () {
-//         console.log("53", this.firstName);
-//         // arrow ->  does not have it's own this. I am going to cheat it from outside
-//         const iAmInner = () => {
-//             console.log("55", this.firstName);
-//         }
-//         iAmInner();
-//     }
-// }
+//   firstName: "Steve",
+//   sayHi: function () {
+//     console.log("53", this.firstName); // 53 Steve
+//     // arrow ->  does not have it's own this. I am going to cheat it from outside
+//     const iAmInner = () => {
+//       console.log("55", this.firstName); // 53 Steve
+//     };
+//     iAmInner();
+//   },
+// };
 // cap3.sayHi();
 
 // rules for this
@@ -81,7 +85,7 @@
 
 // let cap4 = {
 //     firstName: "Steve",
-//     sayHi: function () {
+//     sayHi: function () { // object is the this for method call
 //         console.log("91", this.firstName);
 //         // arrow ->  does not have it's own this. I am going to cheat it from outside
 //         const subInner =  () => {
@@ -89,12 +93,12 @@
 //             const iAmInner = () => {
 //                 console.log("95", this.firstName);
 //             }
-//             iAmInner();
+//             iAmInner(); //91 Steve - arrow function inherited the this from outside
 //         }
-//         subInner();
+//         subInner(); // 91 Steve - arrow function inherited the this from outside
 //     }
 // }
-// cap4.sayHi();
+// cap4.sayHi(); // 91 Steve
 
 let cap5 = {
   firstName: "Steve",
@@ -134,7 +138,7 @@ console.log(
 // console.log(varName);
 
 // "use strict";
-// varName="loki";
+// varName="loki"; // But in strict mode, assigning a value to an undeclared variable is not allowed, so it throws a ReferenceError.
 // console.log(varName);
 
 /*****************question1***********************/
@@ -330,4 +334,3 @@ console.log(arr1);
 console.log(
   "-------------------------------------------------------------------------"
 );
-

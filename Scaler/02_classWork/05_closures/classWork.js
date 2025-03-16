@@ -47,24 +47,25 @@ console.log(
 // ------------------------------- ## Closure ## -------------------------------
 // Question: 02
 // function outerFunction() {
-//     console.log("first line of outerfunction: ", count);
-//     var count = 0;
-//     function innerFunction() {
-//         count++;
-//         return count
-//     }
-//     console.log("second line of outerfunction: ", count);
+//   console.log("first line of outerfunction: ", count);
+//   var count = 0;
+//   function innerFunction() {
 //     count++;
-//     return innerFunction
+//     return count;
+//   }
+//   console.log("second line of outerfunction: ", count);
+//   count++;
+//   return innerFunction;
 // }
 
 // const innerFunc = outerFunction();
-// console.log(innerFunc());
-// console.log(innerFunc());
+// console.log(innerFunc()); // 2
+// console.log(innerFunc()); // 3
 
 // const innerFunc2 = outerFunction();
-// console.log(innerFunc2());
-// console.log(innerFunc2());
+// console.log(innerFunc2()); // 2
+// console.log(innerFunc()); // 4
+// console.log(innerFunc2()); // 3
 
 // Question: 02
 // function createCounter(init, delta) {
@@ -82,6 +83,11 @@ console.log(
 
 // console.log(c1())
 // console.log(c2())
+
+// 15
+// 7
+// 20
+// 9
 
 /***
  * Nested closure : you will get access to outer variable even if the
@@ -110,6 +116,8 @@ let iamINGEC = 200;
 // greeterRtrn();  // iamINGEC=202
 // greeterRtrn(); //  iamINGEC=203
 // console.log("Final Value: ", iamINGEC);
+
+// The variable iamINGEC is not redeclared inside functions, so it refers to the global scope.
 
 /***
  * Application of closures
@@ -291,6 +299,65 @@ function outer() {
 }
 
 let arrfn = outer();
-arrfn[0]();
-arrfn[1]();
-arrfn[2]();
+arrfn[0](); // 4
+arrfn[1](); // 5
+arrfn[2](); // 6
+
+// - var is function-scoped, so by the time setTimeout runs, the loop has finished, and i is 4.
+// - Solution: Use let instead of var!
+
+// ------------------------------- ## Closure Questions ## -------------------------------
+// Q1_1
+// function outer() {
+//     let arrFn = [];
+//     for (var i = 0; i < 3; i++) {
+//         arrFn.push(function fn() {
+//             i++;
+//             console.log(i);
+//         })
+//     }
+
+//     console.log(window);
+//     return arrFn;
+// }
+
+// let arrFn = outer();
+// arrFn[0](); // 4
+// arrFn[1](); // 5
+// arrFn[2](); // 6
+
+/**
+ * fn is taking value from closure -> i=3
+ * */
+function outer() {
+  let arrFn = [];
+  let i = 0;
+  for (i = 0; i < 3; i++) {
+    arrFn.push(function fn() {
+      i++;
+      console.log(i);
+    });
+  }
+  return arrFn;
+}
+
+let arrFn = outer();
+arrFn[0](); // 4
+arrFn[1](); // 5
+arrFn[2](); // 6
+
+// function outer() {
+//     let arrFn = [];
+//     for (let i = 0; i < 3; i++) {
+//         arrFn.push(function fn() {
+//             i++;
+//             console.log(i);
+//         })
+//     }
+//     return arrFn;
+// }
+
+// let arrFn = outer();
+// arrFn[0](); // 1
+// arrFn[1](); // 2
+// arrFn[2](); // 3

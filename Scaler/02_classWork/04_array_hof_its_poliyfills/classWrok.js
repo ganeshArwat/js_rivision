@@ -91,7 +91,7 @@ console.log("copiedObject", deepClonedObj);
 
 // ------------------------------- ## Deep Polly ## -------------------------------
 // This object  -> copy of it
-let person = {
+let person1 = {
   firstName: "John",
   lastName: "Doe",
   address: {
@@ -220,18 +220,20 @@ console.log("joinedStr", joinedStr);
 // }
 
 // fn.count = 0;
-// fn();  // count 0 -> 1
+// fn();  // cont 0 -> 1
 // fn(); // count 1 -> 2
 // console.log(fn.count);
 
 // /** method to a fn */
 // fn.showCount = function () {
-//     console.log("count on fn  is ", this.count);
+//     console.log("count on fn  is ", this.count); // fn.count -> 2
 // }
 // fn.showCount();
 
 // for (let key in fn) {
 //     console.log("key: ", key, " vaue: ", fn[key]);
+// // count: 2
+// // showCount: [Function (anonymous)]
 // }
 
 /*documentation -> function are the object that implements callable constructor
@@ -259,7 +261,7 @@ console.log("joinedStr", joinedStr);
 //     console.log(" I recived a param", param);
 //     if (typeof param === "function") {
 //         param()
-//     }
+//     }u
 // }
 
 // function smallerfn() {

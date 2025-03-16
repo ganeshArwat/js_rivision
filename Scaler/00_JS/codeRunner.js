@@ -1,7 +1,3 @@
-var xyz = 10;
-{
-    var xyz = 20;
-    console.log("value of a: "+ xyz);
-}
-console.log("value of a: "+ xyz);
-// console.log(window)
+// const fs = require("fs");
+// const path = require("path");
+// const filePath = path.join(__dirname, "f1.txt");

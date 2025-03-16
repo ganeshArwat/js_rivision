@@ -1,18 +1,9 @@
-let animal = {
-  jumps: null,
-};
+let jhon = {};
 
-let rabbit = {
-  __proto__: animal,
-  jumps: true,
-};
-
-console.log(rabbit.jumps); // ? (1)
-
-delete rabbit.jumps;
-
-console.log(rabbit.jumps); // ? (2)
-
-delete animal.jumps;
-
-console.log(rabbit.jumps); // ? (3)
+jhon.age = 25;
+let arr = [jhon];
+console.log("John 15", jhon);
+// arr[0]=null;
+jhon = null;
+console.log("John 15", jhon);
+console.log("John 17", arr[0]);

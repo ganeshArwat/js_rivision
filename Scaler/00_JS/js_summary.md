@@ -146,17 +146,58 @@ Each execution context has two main phases:
 
 # JS-7: OOPS-2 : Object creation, Freezing objects
 
+- Creating objects in JS
+- Prototypal Inheritance
+- Object Descriptors
+
 # JS-8: Event loop and Callback
+
+- Intuition of Async JS
+- Async JS with callbacks
+- Event loop with callback queue
+- Serial and Parallel Execution of Async code
 
 # JS-9: Promises and MicroTask Queue
 
+- Asynchronous Javascript
+- Callback Hell
+- Inversion of Control
+- Promises
+- Promises in Javascript
+- Consuming Promises
+- Chaining Promises
+- Callback to promises
+- Why promises are better than callback
+
 # JS-10: S-10: Promise chaining and Imp polyfills
+
+- Revision of Promises
+- Promise.all
+- Create Promise API
 
 # JS-11: Async await & Error handling
 
+- Promises
+- Definition of Resolve and Reject in Promises
+- Promise methods
+- MBE Comms
+
 # JS-12: ES6 DataTypes and Modules
 
+- Modules in JavaScript
+- BigInt DataType
+- Symbol DataType
+- Proxies in JavaScript
+
 # FE Machine coding-1:Intro to the DOM
+
+- Overview of Browser
+- DOM API
+- Reading Attributes
+- CRUD Operations
+- Update an attribute
+- Event Listeners
+- Message-Based Communication
 
 # FE Machine coding-2: Events & Event Handling, Bubbling & capturing
 
