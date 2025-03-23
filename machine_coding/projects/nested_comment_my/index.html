@@ -1,0 +1,150 @@
+<!-- 
+
+
+    Question: Build mutiple comment box.
+
+    use Case:
+
+    Flavour:
+        1. JSON Data -> file system.
+
+    Must have feature:
+
+
+    Good to have features:
+
+
+    Approch:
+       1. HTML/CSS.
+          a. Get the static HTML.
+
+
+       2. Javascript:
+          a. set the onlclick event on the reply button.
+          b. add the reply form to parrent to current reply button
+         c. on submit of form add the reply text to parrent of current reply button.
+
+       3. Edge cases:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        html,
+        body {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /* Styling */
+        .container {
+            padding: 1rem 3rem
+        }
+
+        .comment-container {
+            padding-left: 1rem;
+            border-left: 1px solid black;
+        }
+
+        .reply {
+            color: red;
+            padding-left: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="comment-container">
+            <div class="comment_card">
+                <h3 class="comment_text">Good Morning Everyone, How are you?</h3>
+                <div class="reply" onclick="addReplyForm(this)">Reply</div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script>
+        /*
+
+
+*/
+        const replybtn = document.querySelectorAll(".reply");
+
+
+
+        function addReplyForm(rply) {
+            const parent = rply.parentElement;
+
+            const commentFrom = document.createElement("div");
+            commentFrom.classList.add("container");
+            commentFrom.innerHTML = `<input type="text" placeholder="Add a comment...">
+                 <button class="reply" onclick="reply(this)">Reply</button>`;
+            parent.appendChild(commentFrom);
+        }
+
+        function reply(replybtn) {
+            // Get the parent of the reply button
+            const parent = replybtn.parentElement;
+
+            // Get the reply text
+            const replyText = parent.querySelector("input").value;
+
+            // Create the comment
+            const comment_container = document.createElement("div");
+            comment_container.classList.add("comment-container");
+            const comment_card = document.createElement("div");
+            comment_card.classList.add("comment-card");
+            const replyHeading = document.createElement("h3");
+            replyHeading.classList.add("comment_text");
+            replyHeading.innerHTML = replyText;
+            const commentBtn = document.createElement("div");
+            commentBtn.classList.add("reply");
+            commentBtn.innerHTML = "Reply";
+            commentBtn.setAttribute("onclick", "addReplyForm(this)");
+
+            // Append the comment
+            comment_card.appendChild(replyHeading);
+            comment_card.appendChild(commentBtn);
+            comment_container.appendChild(comment_card);
+
+            // Append the comment to Parrent
+            parent.appendChild(comment_container);
+        }
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
