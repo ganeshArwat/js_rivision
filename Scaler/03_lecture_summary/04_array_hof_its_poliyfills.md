@@ -583,17 +583,12 @@ console.log(operate(5, 3, multiply)); // 15
 
 ```js
 function greeting(message) {
-    return function(name) {
-        console.log(message + ", " + name + "!");
-    };
+  return function (name) {
+    console.log(message + ", " + name + "!");
+  };
 }
 
 const sayHello = greeting("Hello");
-sayHello("Ganesh");  // Hello, Ganesh!
-sayHello("Arwat");   // Hello, Arwat!
+sayHello("Ganesh"); // Hello, Ganesh!
+sayHello("Arwat"); // Hello, Arwat!
 ```
-
-## Callbacks
-
-## HOF Vs Callback
-

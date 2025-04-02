@@ -121,12 +121,6 @@
 - 2️⃣ Example: Higher-Order Function Taking a Function as an Argument
 - 3️⃣ Example: Higher-Order Function Returning a Function
 
-### Callbacks
-
-### HOF Vs Callback
-
-### ES6 Classes and Objects
-
 ---
 
 ## Js-5: Closures
