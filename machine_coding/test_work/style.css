@@ -1,38 +1,15 @@
-html {
-    box-sizing: border-box;
-    font-family: sans-serif;
+div.board {
+    border-style: double;
+    height: 578px;
+    width: 578px;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-html,
-body {
-    margin: 0;
-}
-a {
-    text-decoration: none;
+div.row {
+    display: flex;
 }
 
-li {
-    list-style: none;
-}
-
-/* Styling */
-.container{
-    padding: 1rem 3rem
-}
-
-.comment-container{
-    padding-left: 1rem;
-    border-left: 1px solid black;
-}
-
-.reply{
-    color:red;
-    padding-left: 1rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+div.checkbox {
+    height: 70px;
+    width: 70px;
+    border: 2px solid black;
 }

@@ -176,6 +176,12 @@ Promise 2
 setTimeout
 ```
 
+## Callbacks
+
+```
+
+```
+
 ## Parallel Vs Serial
 
 ## fs module
@@ -359,5 +365,3 @@ This will run forever...
 This will run forever...
 Interval cleared!
 ```
-
-

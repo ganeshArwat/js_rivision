@@ -455,6 +455,4 @@ console.log(filterCS(students));
 
 ## Curry Vs Closure
 
-## asynchrounous code
-
 ## Application Closures

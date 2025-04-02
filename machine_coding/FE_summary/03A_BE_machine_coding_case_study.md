@@ -9,7 +9,7 @@
 - ✅ Scalability & Performance Optimizations
 - ✅ Code Readability & Best Practices
 
-## 🔹 Types of Frontend Machine Coding Problems
+## 🔹 Types of Backend Machine Coding Problems
 
 1. URL Shortener (like Bit.ly)
 2. Rate Limiter (Throttle API requests)
@@ -24,7 +24,7 @@
 
 ---
 
-### 🔹 How to Ace Frontend Machine Coding Rounds?
+### 🔹 How to Ace Backend Machine Coding Rounds?
 
 - ✅ Understand requirements clearly (Ask clarifying questions)
 - ✅ Choose the right tech stack (Node.js, Express, FastAPI, Spring Boot, etc.)

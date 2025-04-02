@@ -597,8 +597,3 @@ sayHello("Arwat");   // Hello, Arwat!
 
 ## HOF Vs Callback
 
-## ES6 Classes and Objects
-
-```
-
-```

@@ -386,3 +386,73 @@ for (let key in childObj) {
 // name : Ganesh
 // parentProp : I am inherited
 ```
+
+## Types of for Loops
+
+### 1️⃣ Traditional for loop
+
+- 🔹 Used when you know the exact number of iterations.
+- 🔹 Best for iterating over arrays using an index.
+
+```js
+for (let i = 0; i < 5; i++) {
+  console.log(i); // 0, 1, 2, 3, 4
+}
+```
+
+### 2️⃣ for...in loop
+
+- 🔹 Used for iterating over object properties.
+- 🔹 It iterates over keys (property names), not values.
+- ⚠ Avoid using for...in for arrays, as it iterates over indexes as strings, which can lead to unexpected behavior.
+
+```js
+const person = { name: "Ganesh", age: 23, city: "Mumbai" };
+
+for (let key in person) {
+  console.log(key, person[key]);
+}
+// Output:
+// name Ganesh
+// age 23
+// city Mumbai
+```
+
+### 3️⃣ for...of loop (ES6)
+
+- 🔹 Used for iterating over iterable objects (arrays, strings, maps, sets).
+- 🔹 Returns values, not keys.
+
+```js
+const fruits = ["Apple", "Mango", "Banana"];
+
+for (let fruit of fruits) {
+  console.log(fruit);
+}
+// Output:
+// Apple
+// Mango
+// Banana
+
+for (let char of "Ganesh") {
+  console.log(char);
+}
+// Output: G a n e s h
+```
+
+### 4️⃣ forEach method (for arrays)
+
+- 🔹 Used for iterating over arrays.
+- 🔹 Cannot be broken using break or continue.
+
+```js
+const numbers = [10, 20, 30];
+
+numbers.forEach((num, index) => {
+  console.log(`Index: ${index}, Value: ${num}`);
+});
+// Output:
+// Index: 0, Value: 10
+// Index: 1, Value: 20
+// Index: 2, Value: 30
+```
