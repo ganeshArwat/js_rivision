@@ -79,6 +79,7 @@
 - Observer
 - Intersection Observer API (for lazy loading, infinite scrolling)
 - MutationObserver (Observing DOM Changes)
+- ResizeObserver
 - Debouncing
 - Throttling
 - Debouncing vs Throttling
