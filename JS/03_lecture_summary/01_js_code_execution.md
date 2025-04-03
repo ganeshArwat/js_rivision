@@ -80,6 +80,29 @@ eval("var a = 10; console.log(a);"); // Output: 10
 
 - eval() creates a separate Eval Execution Context.
 
+## Execution Context Phases
+
+- Each execution context has two main phases:
+
+1. Creation Phase (Memory Allocation)
+
+   - Creates a new execution context.
+   - Allocates memory for variables and functions.
+   - Variables are set to undefined, and functions are stored as references.
+   - this is set based on how the function is called.
+
+2. Execution Phase (Code Execution)
+   - Executes the code line by line.
+   - Assigns values to variables.
+   - Executes function calls and manages the call stack.
+
+## Execution Context & Call Stack
+
+- JavaScript uses a Call Stack to manage execution contexts.
+- The Global Execution Context (GEC) is created first and stays until the script finishes.
+- When a function is called, a Function Execution Context (FEC) is pushed onto the stack.
+- When a function completes, its execution context is popped off the stack.
+
 ## JavaScript Execution Flow.
 
 1. Global Execution Context (GEC) is Created
@@ -418,7 +441,6 @@ JavaScript arrays are a special kind of object where:
 - It is a bug in js which they can't change now, reason is binary code of null is zero and
 - zero treated as a object.
 
-
 ```js
 // Solution 1
 let obj = {
@@ -469,5 +491,3 @@ function superCloneEffective(input) {
 
 let obj1copy = superCloneEffective(obj1);
 ```
-
-

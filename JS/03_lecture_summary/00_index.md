@@ -1,3 +1,64 @@
+## JS-1: Js Code Execution, let var and const
+
+- Js Code Execution Components
+
+  - 1. Memory Heap
+  - 2. Call Stack – Executes synchronous code.
+  - 3. Web APIs – Handles setTimeout, fetch, event listeners, etc.
+  - 4. Microtask Queue – Handles Promises and MutationObserver.
+  - 5. Callback Queue (Task Queue) – Handles setTimeout, setInterval, and events.
+  - 6. Event Loop – Coordinates execution of all queues.
+  - 7. Animation Frame Queue – Handles requestAnimationFrame animations.
+  - 8. Rendering Engine – Repaints the UI at 60 FPS (ideally, ~16.67ms per frame).
+
+- Execution Context in JavaScript
+
+  - 1. Global Execution Context (GEC)
+  - 2. Function Execution Context (FEC)
+  - 3. Eval Execution Context (Rarely Used)
+
+- JavaScript Execution Flow.
+
+  - 1. Global Execution Context (GEC) is Created
+  - 2. Execution Context Creation (For Every Function Call)
+  - 3. Synchronous Code Execution
+  - 4. Asynchronous Code Handling
+  - 5. Event Loop Execution
+
+- JavaScript Execution Order (Including Animations)
+
+- Types of Scope in JavaScript
+
+  - 1. Global Scope
+  - 2. Function Scope
+  - 3. Block Scope
+  - 4. Lexical Scope (Closure Scope)
+
+- Showdowing
+
+  - Example of Shadowing
+  - Block Scope Shadowing
+  - With var (Block Scope)
+  - With var (Function Scope)
+  - Illegal Shadowing
+
+- Hoisting
+
+  - Example of Hoisting with var
+  - Hoisting with let and const
+  - Hoisting with Function Declarations
+  - Hoisting with Function Expressions
+
+- Temporal Dead Zone (TDZ) in JavaScript
+
+- Primitives and Non Primitives
+
+- Var, Let, and Const
+
+- Array
+  - Why are Arrays Objects in JavaScript?
+  - [Important: why typeof null is object?]
+
 ## JS-2: OOPS-1 : This, Bind, Call, Apply, Inheritance
 
 ### Native objects and host objects
@@ -7,20 +68,45 @@
 
 ### Strict Mode
 
+- What is Strict Mode in JavaScript?
+- How to Enable Strict Mode?
+- Why Use Strict Mode?
+  - 1. Preventing accidental global variables
+  - 2. Throwing errors for assignment to read-only properties
+  - 3. Preventing deletion of variables and function
+  - 4. Detecting duplicate parameter names
+  - 5. Restricting the use of this in functions
+
 ### This
 
-- 1. Global Context (this in Global Scope)
-- 2. Function Context (Regular Function)
-- 3. Object Method (this in an Object)
-- 4. Constructor Functions (new Keyword)
-- 5. Arrow Functions (this in Arrow Functions)
-- 6. this in Event Listeners
-- 7. Explicit Binding (call, apply, bind)
-- 8. this in setTimeout and setInterval
+- What is this in JavaScript?
+- Rules for this in JavaScript
+  - 1. Global Context (this in Global Scope)
+  - 2. Function Context (Regular Function)
+  - 3. Object Method (this in an Object)
+  - 4. Constructor Functions (new Keyword)
+  - 5. Arrow Functions (this in Arrow Functions)
+  - 6. this in Event Listeners
+  - 7. Explicit Binding (call, apply, bind)
+  - 8. this in setTimeout and setInterval
 
 ### Chaining
 
+- What is Chaining in JavaScript?
+- Example 1: Method Chaining (String)
+- Example 2: Chaining with Arrays
+- Example 3: Chaining with jQuery (if using jQuery)
+- Example 4: Chaining in Custom Objects (Returning this)
+
 ### Prototypal Inheritance
+
+- What is Prototypal Inheritance in JavaScript?
+- How Prototypal Inheritance Works
+- Example 1: Basic Prototypal Inheritance
+- Example 2: Adding Properties to Prototype
+- Prototype Chain
+- Example 3: Extending Inheritance
+- ES6 Classes and Prototypal Inheritance
 
 ---
 
@@ -31,8 +117,16 @@
 #### Spread Operator
 
 - 1. Spread Operator with Arrays
+  - Copy an array
+  - Merge arrays:
+  - Adding element to an array
+  - spread operator : partial deep copy till level 1.
 - 2. Spread Operator with Objects
+  - Copying an Object
+  - Merging Objects
+  - Overriding Properties
 - 3. Spread Operator with Function Arguments
+  - Passing Array Elements as Arguments
 
 #### Rest Operator
 
@@ -42,10 +136,17 @@
 
 ### Rest Operator vs Spread Operator
 
+- Purpose
+- Usage
+- Example
+
 ### CALL BY VALUE AND REFERENCE
 
 - 1. Call by Value (Primitive Data Types)
 - 2. Call by Reference (Objects, Arrays)
+- Does JavaScript Truly Support Call by Reference?
+  - 1. Modifying properties of an object (mutating the reference) affects the original object. ✅
+  - 2. Reassigning the reference inside a function does not affect the original object. ❌
 
 ### CALL BIND APPLY
 
@@ -54,6 +155,10 @@
 - 3. Apply()
 
 ### POLYFILL OF CALL BIND APPLY
+
+- PollyFill of Call
+- PollyFill of Apply
+- PollyFill of Bind
 
 ---
 

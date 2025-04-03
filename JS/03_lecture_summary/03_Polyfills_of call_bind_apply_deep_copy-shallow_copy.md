@@ -237,14 +237,14 @@ functionName.call(thisArg, arg1, arg2, ...)
 
 ```js
 const person1 = { name: "Ganesh" };
-const person2 = { name: "Sarita" };
+const person2 = { name: "Govind" };
 
 function greet(message) {
   console.log(`${message}, my name is ${this.name}`);
 }
 
 greet.call(person1, "Hello"); // Output: Hello, my name is Ganesh
-greet.call(person2, "Hi"); // Output: Hi, my name is Sarita
+greet.call(person2, "Hi"); // Output: Hi, my name is Govind
 ```
 
 ```js
@@ -255,10 +255,10 @@ const obj1 = {
   },
 };
 
-const obj2 = { name: "Sarita" };
+const obj2 = { name: "Govind" };
 
 // Use obj1's method for obj2
-obj1.showName.call(obj2); // Output: Sarita
+obj1.showName.call(obj2); // Output: Govind
 ```
 
 ```js
@@ -313,12 +313,12 @@ const person = {
   },
 };
 
-const anotherPerson = { name: "Sarita" };
+const anotherPerson = { name: "Govind" };
 
 // Create a new function with `this` bound to anotherPerson
-const greetSarita = person.greet.bind(anotherPerson);
+const greetGovind = person.greet.bind(anotherPerson);
 
-greetSarita(); // Output: Hello, my name is Sarita
+greetGovind(); // Output: Hello, my name is Govind
 ```
 
 #### Partial Application (Pre-setting Arguments)
@@ -380,11 +380,11 @@ const person = {
   },
 };
 
-const user = { firstName: "Ganesh", lastName: "Kadam" };
+const user = { firstName: "Ganesh", lastName: "Arwat" };
 
 // Call `fullName` with `user` as `this`
 person.fullName.apply(user);
-// Output: Ganesh Kadam
+// Output: Ganesh Arwat
 ```
 
 #### 2: apply() vs call()
