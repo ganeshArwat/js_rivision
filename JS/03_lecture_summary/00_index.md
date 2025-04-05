@@ -17,6 +17,12 @@
   - 2. Function Execution Context (FEC)
   - 3. Eval Execution Context (Rarely Used)
 
+- Execution Context Phases
+
+  - 1. Creation Phase (Memory Allocation)
+  - 2. Execution Phase (Code Execution)
+  - 3. Execution Context & Call Stack
+
 - JavaScript Execution Flow.
 
   - 1. Global Execution Context (GEC) is Created
@@ -27,12 +33,18 @@
 
 - JavaScript Execution Order (Including Animations)
 
+  - 1. Call Stack Execution (Runs synchronous code)
+  - 2. Microtask Queue Execution (e.g., Promise.then, queueMicrotask)
+  - 3. Animation Frame Queue Execution (e.g., requestAnimationFrame)
+  - 4. Callback Queue Execution (e.g., setTimeout, setInterval, fetch callbacks)
+
 - Types of Scope in JavaScript
 
   - 1. Global Scope
   - 2. Function Scope
   - 3. Block Scope
   - 4. Lexical Scope (Closure Scope)
+  - 5. Module Scope
 
 - Showdowing
 
@@ -56,8 +68,11 @@
 - Var, Let, and Const
 
 - Array
+
   - Why are Arrays Objects in JavaScript?
   - [Important: why typeof null is object?]
+
+- why typeof null is object
 
 ## JS-2: OOPS-1 : This, Bind, Call, Apply, Inheritance
 
@@ -166,14 +181,34 @@
 
 ### How Copy Works in General in js
 
-### Copying Primitives (Pass by Value)
+- Copying Primitives (Pass by Value)
+- Copying Objects and Arrays (Pass by Reference)
 
-### Copying Objects and Arrays (Pass by Reference)
-
-### Ways to Copy Objects & Arrays
+### Ways to Copy Objects
 
 - 1️⃣ Shallow Copy (1-Level Deep)
+
+  - Using Object.assign()
+  - Using Spread Operator {…}
+
 - 2️⃣ Deep Copy (Fully Independent)
+  - Using JSON.parse(JSON.stringify(obj))
+  - Using structuredClone() (Modern Approach)
+  - Using Lodash (\_.cloneDeep)
+
+### Ways to Copy Arrays
+
+- 1️⃣ Shallow Copy (1-Level Deep)
+
+  - Using Spread Operator […]
+  - Using Array.prototype.slice()
+  - Using Array.from()
+
+- 2️⃣ Deep Copy (Fully Independent)
+
+  - Using JSON.parse(JSON.stringify(arr))
+  - Using structuredClone(arr)
+  - Using “\_.cloneDeep(arr)”
 
 ### Deep Copy PollyFill
 
@@ -184,30 +219,39 @@
 - 1️⃣ Creating an Array
 - 2️⃣ Important Array
 
-  - push()
-  - pop()
-  - unshift()
-  - shift()
-  - indexOf()
-  - includes()
-  - find()
-  - findIndex()
-  - slice()
-  - splice()
-  - concat()
-  - join()
-  - forEach()
-  - map()
-  - filter()
-  - reduce()
-  - sort()
-  - reverse()
-  - flat()
-  - fill()
-  - some()
-  - every()
+  - Adding & Removing Elements
+    - push()
+    - pop()
+    - unshift()
+    - shift()
+  - Accessing & Finding Elements
+    - indexOf()
+    - includes()
+    - find()
+    - findIndex()
+  - Modifying & Slicing
+    - slice()
+    - splice()
+    - concat()
+    - join()
+    - split()
+  - Iteration & Transformation
+    - forEach()
+    - map()
+    - filter()
+    - reduce()
+  - Sorting & Reversing
+    - sort()
+    - reverse()
+  - Special Methods
+    - flat()
+    - fill()
+    - some()
+    - every()
 
 - slice() vs. splice() in JavaScript
+  - array.slice(startIndex, endIndex);
+  - array.splice(startIndex, deleteCount, item1, item2, ...);
 
 ### IIFE (Immediately Invoked Function Expression)
 

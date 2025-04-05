@@ -29,10 +29,10 @@ console.log(b); // 20
 let obj1 = { name: "Ganesh" };
 let obj2 = obj1; // Copying by reference
 
-obj2.name = "Kadam"; // Modifies both 'obj1' and 'obj2'
+obj2.name = "Arwat"; // Modifies both 'obj1' and 'obj2'
 
-console.log(obj1.name); // "Kadam"
-console.log(obj2.name); // "Kadam"
+console.log(obj1.name); // "Arwat"
+console.log(obj2.name); // "Arwat"
 ```
 
 ### Ways to Copy Objects & Arrays

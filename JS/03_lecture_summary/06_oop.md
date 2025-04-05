@@ -55,10 +55,10 @@ Person.prototype.greet = function () {
 };
 
 const person1 = new Person("Ganesh", 23);
-const person2 = new Person("Sarita", 25);
+const person2 = new Person("Cne", 25);
 
 person1.greet(); // Output: Hi, I'm Ganesh.
-person2.greet(); // Output: Hi, I'm Sarita.
+person2.greet(); // Output: Hi, I'm Cne.
 ```
 
 #### 4. ES6 Classes (Syntactic Sugar for Prototypes)
